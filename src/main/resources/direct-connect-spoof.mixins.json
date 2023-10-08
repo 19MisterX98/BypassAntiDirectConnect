@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "misterx.bypassADC.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ConnectScreenMixin",
+    "MultiplayerServerListPingerMixin",
+    "ServerInfoMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

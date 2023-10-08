@@ -1,24 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "bypass-anti-direct-connect",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "name": "Bypass AntiDirectConnect",
+  "description": "An addon template for the Meteor addons that bypasses AntiDirectConnect",
   "authors": [
-    "seasnail"
+    "19MisterX98"
   ],
-  "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
-  },
   "icon": "assets/template/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "misterx.bypassADC.Addon"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "direct-connect-spoof.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,25,25"
