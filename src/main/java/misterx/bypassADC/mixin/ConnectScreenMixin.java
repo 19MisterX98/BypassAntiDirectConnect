@@ -27,7 +27,7 @@ public class ConnectScreenMixin {
         long lastPingedTime = ((IServerInfo) info).getLastPing();
         long timeSinceLastPing = System.currentTimeMillis() - lastPingedTime;
 
-        if ((lastPingedTime == 0 && module.onlyPingOnce.get()) || timeSinceLastPing > module.slpValidityDuration.get()*1000) {
+        if (module.onlyPingOnce.get() ? lastPingedTime == 0 : timeSinceLastPing > module.slpValidityDuration.get() * 1000L) {
             ci.cancel(); // cancel connect attempt and ping the server first
             //ping server
             new Thread(() -> {
